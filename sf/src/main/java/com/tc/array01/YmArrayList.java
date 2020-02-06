@@ -92,6 +92,9 @@ public class YmArrayList<E> implements YmList<E>{
         for (int i = 0; i < elementData.length; i++) {
             newElementData[i] = elementData[i];
         }*/
+        if (newCapacity <= DEFAULT_CAPACITY){
+            return;
+        }
         elementData = Arrays.copyOf(elementData,newCapacity);
         //elementData = newElementData;
     }
