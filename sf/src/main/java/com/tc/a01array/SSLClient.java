@@ -1,4 +1,4 @@
-package com.tc.array01;
+package com.tc.a01array;
 
 import org.apache.http.conn.ClientConnectionManager;
 import org.apache.http.conn.scheme.Scheme;

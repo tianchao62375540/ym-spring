@@ -1,4 +1,4 @@
-package com.tc.array01;
+package com.tc.a01array;
 
 /**
  * @Auther: tianchao

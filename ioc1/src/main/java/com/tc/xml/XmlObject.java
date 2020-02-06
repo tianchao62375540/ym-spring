@@ -6,4 +6,5 @@ package com.tc.xml;
  * @Description:
  */
 public class XmlObject {
+
 }
