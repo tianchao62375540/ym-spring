@@ -38,7 +38,7 @@ public class YmLinkedQueue<E> implements YmQueue<E>{
     }
     @Override
     public void enqueue(E e) {
-        if (size == 0 ){
+        /*if (size == 0 ){
             Node node = new Node(e);
             head = node;
             tail = node;
@@ -48,7 +48,17 @@ public class YmLinkedQueue<E> implements YmQueue<E>{
         tail.next = new Node(e);
         tail = tail.next;
         size++;
-        return;
+        return;*/
+        //上面思路太复杂 不清晰
+        //加进来的节点 肯定排在尾部 当前的tail是尾部的前一个节点
+        Node pre = tail;
+        tail = new Node(e, null);
+        if (size == 0){
+            head = tail;
+        }else{
+            pre.next = tail;
+        }
+        size++;
     }
     @Override
     public E dequeue() {
@@ -58,6 +68,10 @@ public class YmLinkedQueue<E> implements YmQueue<E>{
         E ret = head.data;
         head = head.next;
         size --;
+        //为了严紧 但是没啥用应该  因为当size ==0 head=null tail执行了一个元素 但是添加元素的时候 tail tail赋值后从新赋值给了head,并不影响
+        if (size == 0){
+            tail = null;
+        }
         return ret;
     }
 
