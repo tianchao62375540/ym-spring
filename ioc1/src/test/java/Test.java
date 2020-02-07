@@ -9,6 +9,8 @@ import com.tc.condition.ConditionAppConfig;
 import com.tc.factorybean.FactoryBeanAppConfig;
 import com.tc.importselector.ImportSelectorAppConfig;
 import com.tc.importselector.ImportSelectorObject;
+import com.tc.prototype.PrototypeAppConfig;
+import com.tc.prototype.PrototypeObj;
 import com.tc.xml.XmlObject;
 import org.springframework.beans.factory.support.*;
 import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
@@ -113,5 +115,11 @@ public class Test {
         Cat cat = (Cat)context.getBean(Cat.class);
         System.out.println(cat);
         cat.eat();
+    }
+    @org.junit.Test
+    public void testPrototype(){
+        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(PrototypeAppConfig.class);
+        System.out.println(context.getBean("prototypeObj"));
+        System.out.println(context.getBean("prototypeObj"));
     }
 }
