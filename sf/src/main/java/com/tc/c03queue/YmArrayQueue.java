@@ -113,7 +113,7 @@ public class YmArrayQueue<E> implements YmQueue<E> {
         queue.enqueue(500);
         System.out.println(queue.peek());
         System.out.println(queue.dequeue());
-        System.out.println("=============");
+        System.out.println("=========");
         System.out.println(queue.dequeue());
     }
 }
