@@ -119,7 +119,8 @@ public class Test {
     @org.junit.Test
     public void testPrototype(){
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(PrototypeAppConfig.class);
-        System.out.println(context.getBean("prototypeObj"));
-        System.out.println(context.getBean("prototypeObj"));
+        System.out.println(context.getBean("componentProtoObject"));
+        System.out.println(context.getBean("componentProtoObject"));
+        System.out.println(context.getBean("componentProtoObject"));
     }
 }

@@ -1,9 +1,6 @@
 package com.tc.prototype;
 
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Scope;
-import org.springframework.context.annotation.ScopedProxyMode;
+import org.springframework.context.annotation.*;
 
 import javax.swing.*;
 
@@ -13,6 +10,7 @@ import javax.swing.*;
  * @Description:
  */
 @Configuration
+@ComponentScan("com.tc.prototype")
 public class PrototypeAppConfig {
 
 
