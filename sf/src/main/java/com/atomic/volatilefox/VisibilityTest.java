@@ -12,7 +12,7 @@ public class VisibilityTest {
     class BooleanObj{
         boolean flag = false;
     }
-    private     volatile   BooleanObj booleanObj = new BooleanObj();
+    private     final      BooleanObj booleanObj = new BooleanObj();
 
 
     public void refresh(){

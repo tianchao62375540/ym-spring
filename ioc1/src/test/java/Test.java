@@ -42,6 +42,7 @@ public class Test {
     public void testFactoryBean(){
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(FactoryBeanAppConfig.class);
         System.out.println(context.getBean("myFactoryBean"));
+        System.out.println(context.getBean("myFactoryBean"));
         System.out.println(context.getBean("&myFactoryBean"));
     }
     @org.junit.Test
@@ -107,6 +108,7 @@ public class Test {
     public void testAll(){
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(AllAppConfig.class);
         System.out.println("testAll finish.................");
+        System.out.println(context.getBean("allAppConfig"));
     }
 
     @org.junit.Test
