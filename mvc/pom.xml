@@ -11,6 +11,13 @@
     <modules>
         <module>servlet</module>
         <module>spring-mvc-1</module>
+        <module>spring-mvc-3</module>
+        <module>spring-mvc-4</module>
+        <module>spring-mvc-5</module>
+        <module>spring-mvc-6</module>
+        <module>spring-mvc-7</module>
+        <module>spring-boot-1</module>
+        <module>spring-mvc-8-boot</module>
     </modules>
 
 

@@ -1,5 +1,6 @@
 import com.tc.all.AllAppConfig;
 import com.tc.all.Cat;
+import com.tc.autowiremode.AutoWiredAppConfig;
 import com.tc.bean.SimpleAppConfig;
 import com.tc.bean.User;
 import com.tc.beandefinitionregestor.ImportBeanDefinitionRegistrarAppConfig;
@@ -125,4 +126,9 @@ public class Test {
         System.out.println(context.getBean("componentProtoObject"));
         System.out.println(context.getBean("componentProtoObject"));
     }
+    @org.junit.Test
+    public void testAutowireMode(){
+        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(AutoWiredAppConfig.class);
+    }
+
 }

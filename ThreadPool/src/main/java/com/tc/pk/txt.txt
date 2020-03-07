@@ -1,0 +1,30 @@
+
+
+
+
+
+一、构造方法 赋值
+    public ThreadPoolExecutor(int corePoolSize, 核心数量
+                              int maximumPoolSize,非核心数量
+                              long keepAliveTime,保持时长
+                              TimeUnit unit,时间单位
+                              BlockingQueue<Runnable> workQueue,队列 FIFO
+                              ThreadFactory threadFactory,线程工程类
+                              RejectedExecutionHandler handler)拒绝策略
+
+二、submit方法执行
+  java.util.concurrent.ThreadPoolExecutor.execute
+   >java.util.concurrent.ThreadPoolExecutor.addWorker
+   >java.util.concurrent.ThreadPoolExecutor.processWorkerExit 销毁
+
+
+java.util.concurrent.ThreadPoolExecutor.getTask ##从队列里取
+   java.util.concurrent.ThreadPoolExecutor.Worker  >aqs >Runnable>run方法
+
+
+三、拒绝策略
+   java.util.concurrent.RejectedExecutionHandler
+
+
+四、定时任务
+   java.util.concurrent.ThreadPoolExecutor.ensurePrestart 确保 从队列里面取
